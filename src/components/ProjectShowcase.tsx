@@ -1,5 +1,5 @@
 import { Box, Typography, Button, Paper, useTheme } from '@mui/material';
-import { GitHub, Launch } from '@mui/icons-material';
+import { GitHub } from '@mui/icons-material';
 
 interface ProjectShowcaseProps {
   title: string;
@@ -69,7 +69,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
           </Typography>
         ))}
       </Box>
-      <Box sx={{ mt: 2, display: 'flex', gap: 1 }}>
+      <Box sx={{ display: 'flex', gap: 2, mt: 2 }}>
         <Button
           variant="outlined"
           startIcon={<GitHub />}
@@ -77,30 +77,15 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            borderColor: theme.palette.primary.main,
-            color: theme.palette.primary.main,
+            color: 'primary.main',
+            borderColor: 'primary.main',
             '&:hover': {
-              borderColor: theme.palette.primary.dark,
+              borderColor: 'primary.dark',
+              backgroundColor: 'primary.light',
             },
           }}
         >
           View Code
-        </Button>
-        <Button
-          variant="outlined"
-          startIcon={<Launch />}
-          href={demoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          sx={{
-            borderColor: theme.palette.primary.main,
-            color: theme.palette.primary.main,
-            '&:hover': {
-              borderColor: theme.palette.primary.dark,
-            },
-          }}
-        >
-          View Demo
         </Button>
       </Box>
     </Paper>

@@ -30,17 +30,17 @@ const Home = () => {
       title: 'Nashville Real Estate Market Analysis',
       description: 'Comprehensive real estate market analysis project leveraging advanced data science techniques. Developed a robust data pipeline using SQL for data cleaning and feature engineering, created interactive visualizations in Tableau, and implemented machine learning models to predict property values. The analysis provides actionable insights for real estate investors and market stakeholders.',
       imageUrl: 'https://placehold.co/600x400/2c3e50/ffffff?text=Nashville+Real+Estate+Analysis',
-      githubUrl: 'https://github.com/zpicard/nashville-housing-analysis',
+      githubUrl: 'https://public.tableau.com/views/NashvilleHousingAnalysis',
       demoUrl: 'https://public.tableau.com/views/NashvilleHousingAnalysis',
       technologies: ['SQL', 'Python', 'Tableau', 'Machine Learning', 'Matplotlib', 'NumPy'],
     },
     {
-      title: 'eBay Market Intelligence Platform',
-      description: 'Advanced market intelligence platform leveraging eBay\'s merchandising API and OpenAI integration. Developed a sophisticated data pipeline to analyze trending products across technology categories, implement dynamic pricing strategies, and generate competitive market insights. Features include real-time price tracking, market trend analysis, and AI-powered price recommendations.',
-      imageUrl: 'https://placehold.co/600x400/2c3e50/ffffff?text=eBay+Market+Intelligence',
-      githubUrl: 'https://github.com/zpicard/ebay-product-insights',
-      demoUrl: 'https://zpicard.github.io/ebay-product-insights',
-      technologies: ['Python', 'API Integration', 'OpenAI', 'Data Analysis', 'Pandas', 'Machine Learning'],
+      title: 'Instacart Market Basket Analysis',
+      description: 'Advanced predictive analytics project using the Instacart Market Basket Analysis dataset. Implemented multiple machine learning models (LightGBM, Random Forest, XGBoost) to forecast product reordering patterns. Features include comprehensive feature engineering, model performance optimization, and KPI tracking. The project demonstrates expertise in predictive modeling, data preprocessing, and model evaluation.',
+      imageUrl: 'https://placehold.co/600x400/2c3e50/ffffff?text=Instacart+Analysis',
+      githubUrl: 'https://github.com/zpicard/instacart-market-basket-analysis',
+      demoUrl: 'https://zpicard.github.io/instacart-market-basket-analysis',
+      technologies: ['Python', 'Machine Learning', 'LightGBM', 'XGBoost', 'Random Forest', 'SQL', 'Data Analysis'],
     },
   ];
 
@@ -140,17 +140,17 @@ const Home = () => {
               {
                 icon: <DataObjectIcon sx={{ fontSize: 40 }} />,
                 title: 'Data Science',
-                description: 'Expert in data analysis, visualization, and statistical modeling using Python (Pandas, NumPy, SciPy), SQL, and Tableau. Skilled in exploratory data analysis and predictive modeling.',
+                description: 'Expert in data visualization and analytics using Python libraries, Tableau, and Power BI. Proficient in handling big data through SQL and database management systems. Skilled in predictive modeling, statistical analysis, and creating interactive dashboards. Experienced in data warehousing, ETL processes, and advanced Excel techniques for business intelligence.',
               },
               {
                 icon: <PsychologyIcon sx={{ fontSize: 40 }} />,
                 title: 'Machine Learning',
-                description: 'Experienced in developing and implementing machine learning models for various applications, including image detection and predictive analytics. Proficient in model evaluation and optimization.',
+                description: 'Specialized in advanced machine learning algorithms including XGBoost, LightGBM, and Random Forest classifiers. Expert in model optimization, hyperparameter tuning, and ensemble methods. Proficient in developing robust predictive models with a focus on performance metrics and cross-validation techniques.',
               },
               {
                 icon: <CodeIcon sx={{ fontSize: 40 }} />,
                 title: 'Full Stack Development',
-                description: 'Skilled in building modern web applications using React, JavaScript, HTML, and CSS. Experienced in GUI development with Python (Tkinter) and creating interactive data visualization tools.',
+                description: 'Expert in modern web development using React, TypeScript, and Material-UI. Specialized in creating responsive, interactive interfaces with smooth animations using Framer Motion. Proficient in UI/UX design principles, component-based architecture, and Python GUI development with Tkinter. Skilled in implementing responsive layouts and data visualization tools.',
               },
             ].map((expertise, index) => (
               <motion.div

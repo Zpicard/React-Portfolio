@@ -39,20 +39,18 @@ const ContactSection = () => {
     >
       <Container maxWidth="lg">
         <motion.div {...fadeInUp}>
-          <Typography
-            variant="h2"
-            align="center"
-            sx={{ mb: 6, fontWeight: 700 }}
-          >
-            Let's Build Something Amazing Together
+          <Typography variant="h4" gutterBottom sx={{ 
+            fontWeight: 'bold',
+            textAlign: 'center',
+            mb: 4,
+            background: 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }}>
+            Let's Connect
           </Typography>
-          <Typography
-            variant="body1"
-            align="center"
-            sx={{ mb: 4, maxWidth: '600px', mx: 'auto', fontSize: '1.2rem', opacity: 0.9 }}
-          >
-            I'm always interested in hearing about new projects and opportunities.
-            Feel free to reach out!
+          <Typography variant="h6" color="text.secondary" align="center" paragraph sx={{ mb: 4 }}>
+            I'm actively seeking opportunities in data science and machine learning. Let's discuss how my expertise in predictive modeling, data visualization, and full-stack development can contribute to your team.
           </Typography>
           <Stack
             direction="row"

@@ -1,54 +1,108 @@
-# React + TypeScript + Vite
+# Zachary Picard's Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, TypeScript, and Material-UI. This portfolio showcases my expertise in data science, machine learning, and full-stack development.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 Modern and responsive design
+- ⚡ Fast and optimized performance
+- 🎭 Smooth animations and transitions
+- 📱 Mobile-friendly interface
+- 🎯 Interactive skill showcase
+- 📊 Project portfolio with detailed case studies
+- 🔍 SEO optimized
+- 🌙 Clean and professional UI
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 18
+- TypeScript
+- Material-UI (MUI)
+- Framer Motion
+- Vite
+- React Router
+- GitHub Pages (for deployment)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Zpicard/React-Portfolio.git
+cd React-Portfolio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:5173/React-Portfolio/](http://localhost:5173/React-Portfolio/) in your browser.
+
+### Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To deploy to GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+## Project Structure
+
+```
+src/
+├── components/         # Reusable UI components
+├── pages/             # Page components
+├── assets/            # Static assets (images, etc.)
+├── styles/            # Global styles and theme
+└── App.tsx            # Main application component
+```
+
+## Features in Detail
+
+### Interactive Skills Showcase
+- Expandable skill cards with detailed information
+- Animated transitions and hover effects
+- Color-coded categories for easy navigation
+- Tool chips with hover effects
+
+### Project Portfolio
+- Detailed project case studies
+- Interactive project cards
+- Links to GitHub repositories and live demos
+- Technology stack highlights
+
+### Responsive Design
+- Mobile-first approach
+- Adaptive layouts
+- Touch-friendly interactions
+- Optimized for all screen sizes
+
+## Deployment
+
+The site is deployed using GitHub Pages. Any push to the main branch will automatically trigger a new deployment.
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

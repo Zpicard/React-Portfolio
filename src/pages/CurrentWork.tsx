@@ -1,13 +1,9 @@
-import { Box, Container, Typography, Paper, useTheme, Button } from '@mui/material';
+import { Box, Container, Typography, Grid, Paper, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import CodeIcon from '@mui/icons-material/Code';
-import TimelineIcon from '@mui/icons-material/Timeline';
-import DataObjectIcon from '@mui/icons-material/DataObject';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 const CurrentWork = () => {
-  const theme = useTheme();
-
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -16,155 +12,119 @@ const CurrentWork = () => {
 
   const projects = [
     {
-      title: 'Analogic Data Analytics',
-      description: 'Working as a Data Analytics & Physics Intern, developing Python-based GUI tools and managing databases for machine learning image detection models.',
-      icon: <DataObjectIcon sx={{ fontSize: 40 }} />,
-      status: 'In Progress',
-      technologies: ['Python', 'GUI Design', 'Machine Learning', 'Database Management'],
-      githubUrl: 'https://github.com/zpicard/analogic-projects',
-    },
-    {
-      title: 'eBay Product Insights',
-      description: 'Developing a project utilizing eBay\'s merchandising API and OpenAI integration for product price comparison and analysis.',
-      icon: <TimelineIcon sx={{ fontSize: 40 }} />,
-      status: 'In Development',
-      technologies: ['Python', 'API Integration', 'OpenAI', 'Data Analysis'],
-      githubUrl: 'https://github.com/zpicard/ebay-product-insights',
+      title: 'Instacart Market Basket Analysis',
+      description: 'A comprehensive analysis of customer purchasing patterns using machine learning techniques. The project involves data preprocessing, feature engineering, and predictive modeling to forecast customer behavior.',
+      technologies: ['Python', 'Pandas', 'Scikit-learn', 'XGBoost', 'LightGBM'],
+      github: 'https://github.com/Zpicard/Instacart-Market-Basket-Analysis',
+      demo: 'https://github.com/Zpicard/Instacart-Market-Basket-Analysis',
+      image: '/instacart.png',
     },
     {
       title: 'Portfolio Website',
-      description: 'Modern portfolio website built with React, TypeScript, and Material-UI, showcasing my projects and skills.',
-      icon: <CodeIcon sx={{ fontSize: 40 }} />,
-      status: 'Completed',
-      technologies: ['React', 'TypeScript', 'Material-UI', 'Vite'],
-      githubUrl: 'https://github.com/zpicard/portfolio',
+      description: 'A modern, responsive portfolio website built with React and Material-UI. Features include smooth animations, dark mode support, and a clean, professional design.',
+      technologies: ['React', 'TypeScript', 'Material-UI', 'Framer Motion'],
+      github: 'https://github.com/Zpicard/React-Portfolio',
+      demo: 'https://zpicard.github.io/React-Portfolio/',
+      image: '/portfolio.png',
     },
   ];
 
   return (
-    <Box
-      component={motion.div}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      sx={{ py: 8 }}
-    >
+    <Box sx={{ py: 8 }}>
       <Container maxWidth="lg">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <Typography
-            variant="h2"
-            align="center"
-            sx={{ mb: 6, fontWeight: 700 }}
-          >
+        <motion.div {...fadeInUp}>
+          <Typography variant="h2" align="center" gutterBottom>
             Current Work
           </Typography>
-          <Typography
-            variant="body1"
-            align="center"
-            sx={{ mb: 8, maxWidth: '800px', mx: 'auto', fontSize: '1.2rem' }}
-          >
-            Explore my ongoing projects and work experience in data science and software development.
+          <Typography variant="body1" align="center" sx={{ mb: 6, maxWidth: '800px', mx: 'auto' }}>
+            Here are some of my recent projects and ongoing work. Each project showcases different aspects of my skills and expertise.
           </Typography>
         </motion.div>
 
-        <Box
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: {
-              xs: '1fr',
-              md: 'repeat(2, 1fr)',
-              lg: 'repeat(3, 1fr)',
-            },
-            gap: 4,
-          }}
-        >
+        <Grid container spacing={4}>
           {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              {...fadeInUp}
-              transition={{ delay: index * 0.2 }}
-            >
-              <Paper
-                sx={{
-                  p: 4,
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  transition: 'all 0.3s ease-in-out',
-                  '&:hover': {
-                    transform: 'translateY(-8px)',
-                    boxShadow: '0 8px 30px rgba(0,0,0,0.1)',
-                  },
-                }}
+            <Grid item xs={12} md={6} key={project.title}>
+              <motion.div
+                {...fadeInUp}
+                transition={{ delay: index * 0.2 }}
               >
-                <Box sx={{ mb: 2 }}>
-                  {project.icon}
-                </Box>
-                <Typography variant="h5" gutterBottom>
-                  {project.title}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{ mb: 2 }}
+                <Paper
+                  elevation={3}
+                  sx={{
+                    p: 3,
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'transform 0.3s ease-in-out',
+                    '&:hover': {
+                      transform: 'translateY(-8px)',
+                    },
+                  }}
                 >
-                  {project.description}
-                </Typography>
-                <Box sx={{ mb: 2 }}>
-                  <Typography
-                    variant="caption"
+                  <Box
                     sx={{
-                      display: 'inline-block',
-                      px: 1,
-                      py: 0.5,
+                      width: '100%',
+                      height: 200,
+                      mb: 2,
                       borderRadius: 1,
-                      bgcolor: theme.palette.primary.main,
-                      color: 'white',
+                      overflow: 'hidden',
+                      background: `url(${project.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
                     }}
-                  >
-                    {project.status}
+                  />
+                  <Typography variant="h5" gutterBottom>
+                    {project.title}
                   </Typography>
-                </Box>
-                <Box sx={{ mb: 3 }}>
-                  {project.technologies.map((tech) => (
-                    <Typography
-                      key={tech}
-                      variant="caption"
-                      sx={{
-                        display: 'inline-block',
-                        mr: 1,
-                        mb: 1,
-                        px: 1,
-                        py: 0.5,
-                        borderRadius: 1,
-                        bgcolor: theme.palette.primary.light,
-                        color: 'white',
-                      }}
+                  <Typography variant="body1" sx={{ mb: 2, flexGrow: 1 }}>
+                    {project.description}
+                  </Typography>
+                  <Box sx={{ mb: 2 }}>
+                    {project.technologies.map((tech) => (
+                      <Typography
+                        key={tech}
+                        component="span"
+                        sx={{
+                          display: 'inline-block',
+                          mr: 1,
+                          mb: 1,
+                          px: 2,
+                          py: 0.5,
+                          borderRadius: 1,
+                          bgcolor: 'primary.main',
+                          color: 'white',
+                          fontSize: '0.875rem',
+                        }}
+                      >
+                        {tech}
+                      </Typography>
+                    ))}
+                  </Box>
+                  <Box sx={{ display: 'flex', gap: 2 }}>
+                    <Button
+                      variant="outlined"
+                      startIcon={<GitHubIcon />}
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      {tech}
-                    </Typography>
-                  ))}
-                </Box>
-                <Box sx={{ mt: 'auto' }}>
-                  <Button
-                    variant="outlined"
-                    startIcon={<GitHubIcon />}
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    fullWidth
-                  >
-                    View Code
-                  </Button>
-                </Box>
-              </Paper>
-            </motion.div>
+                      View Code
+                    </Button>
+                    <Button
+                      variant="contained"
+                      startIcon={<LaunchIcon />}
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Demo
+                    </Button>
+                  </Box>
+                </Paper>
+              </motion.div>
+            </Grid>
           ))}
-        </Box>
+        </Grid>
       </Container>
     </Box>
   );
