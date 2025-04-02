@@ -1,6 +1,5 @@
-import { Box, Container, Typography, Button, useTheme } from '@mui/material';
+import { Box, Container, Typography, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
-import { Link as RouterLink } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import FeaturesSection from '../components/FeaturesSection';
 import ProjectShowcase from '../components/ProjectShowcase';
@@ -23,27 +22,25 @@ const Home = () => {
       title: 'Portfolio Website',
       description: 'Modern, responsive portfolio website built with React, TypeScript, and Material-UI. Features include smooth animations with Framer Motion, responsive design, and interactive components. Implemented using modern web development practices including component-based architecture, TypeScript for type safety, and Material-UI for consistent design.',
       imageUrl: 'https://placehold.co/600x400/2c3e50/ffffff?text=Portfolio+Website',
-      codeSnippetUrl: 'https://placehold.co/600x400/34495e/ffffff?text=Code+Snippet',
-      technologies: ['React', 'TypeScript', 'Material-UI', 'Framer Motion', 'Vite', 'CSS-in-JS', 'Responsive Design'],
       githubUrl: 'https://github.com/Zpicard/portfolio-react',
+      demoUrl: 'https://zpicard.github.io/React-Portfolio',
+      technologies: ['React', 'TypeScript', 'Material-UI', 'Framer Motion', 'Vite', 'CSS-in-JS', 'Responsive Design'],
     },
     {
       title: 'Nashville Real Estate Market Analysis',
       description: 'Comprehensive real estate market analysis project leveraging advanced data science techniques. Developed a robust data pipeline using SQL for data cleaning and feature engineering, created interactive visualizations in Tableau, and implemented machine learning models to predict property values. The analysis provides actionable insights for real estate investors and market stakeholders.',
       imageUrl: 'https://placehold.co/600x400/2c3e50/ffffff?text=Nashville+Real+Estate+Analysis',
-      pdfUrl: '/pdfs/nashville-analysis.pdf',
-      codeSnippetUrl: 'https://placehold.co/600x400/34495e/ffffff?text=Code+Snippet',
-      tableauUrl: 'https://public.tableau.com/views/NashvilleHousingAnalysis',
-      technologies: ['SQL', 'Python', 'Tableau', 'Machine Learning', 'Matplotlib', 'NumPy'],
       githubUrl: 'https://github.com/zpicard/nashville-housing-analysis',
+      demoUrl: 'https://public.tableau.com/views/NashvilleHousingAnalysis',
+      technologies: ['SQL', 'Python', 'Tableau', 'Machine Learning', 'Matplotlib', 'NumPy'],
     },
     {
       title: 'eBay Market Intelligence Platform',
       description: 'Advanced market intelligence platform leveraging eBay\'s merchandising API and OpenAI integration. Developed a sophisticated data pipeline to analyze trending products across technology categories, implement dynamic pricing strategies, and generate competitive market insights. Features include real-time price tracking, market trend analysis, and AI-powered price recommendations.',
       imageUrl: 'https://placehold.co/600x400/2c3e50/ffffff?text=eBay+Market+Intelligence',
-      codeSnippetUrl: 'https://placehold.co/600x400/34495e/ffffff?text=Code+Snippet',
-      technologies: ['Python', 'API Integration', 'OpenAI', 'Data Analysis', 'Pandas', 'Machine Learning'],
       githubUrl: 'https://github.com/zpicard/ebay-product-insights',
+      demoUrl: 'https://zpicard.github.io/ebay-product-insights',
+      technologies: ['Python', 'API Integration', 'OpenAI', 'Data Analysis', 'Pandas', 'Machine Learning'],
     },
   ];
 

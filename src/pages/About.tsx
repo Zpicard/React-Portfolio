@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid, Paper, useTheme } from '@mui/material';
+import { Box, Container, Typography, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
 import CodeIcon from '@mui/icons-material/Code';
 import SchoolIcon from '@mui/icons-material/School';
@@ -6,8 +6,6 @@ import WorkIcon from '@mui/icons-material/Work';
 import InterestsIcon from '@mui/icons-material/Interests';
 
 const About = () => {
-  const theme = useTheme();
-
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },

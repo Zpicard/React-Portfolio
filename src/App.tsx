@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Navbar from './components/Navbar';
@@ -7,7 +7,7 @@ import About from './pages/About';
 import CurrentWork from './pages/CurrentWork';
 import SkillsAndResume from './pages/SkillsAndResume';
 import Box from '@mui/material/Box';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 const theme = createTheme({
   palette: {
@@ -105,42 +105,51 @@ const theme = createTheme({
   },
 });
 
+function AppRoutes() {
+  const location = useLocation();
+  
+  return (
+    <Box
+      sx={{
+        minHeight: '100vh',
+        width: '100vw',
+        maxWidth: '100vw',
+        overflowX: 'hidden',
+        background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
+        position: 'relative',
+      }}
+    >
+      <Navbar />
+      <Box
+        component="main"
+        sx={{
+          position: 'relative',
+          zIndex: 1,
+          width: '100%',
+          maxWidth: '100vw',
+          overflowX: 'hidden',
+        }}
+      >
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/current-work" element={<CurrentWork />} />
+            <Route path="/skills" element={<SkillsAndResume />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </AnimatePresence>
+      </Box>
+    </Box>
+  );
+}
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Box
-          sx={{
-            minHeight: '100vh',
-            width: '100vw',
-            maxWidth: '100vw',
-            overflowX: 'hidden',
-            background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
-            position: 'relative',
-          }}
-        >
-          <Navbar />
-          <Box
-            component="main"
-            sx={{
-              position: 'relative',
-              zIndex: 1,
-              width: '100%',
-              maxWidth: '100vw',
-              overflowX: 'hidden',
-            }}
-          >
-            <AnimatePresence mode="wait">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/current-work" element={<CurrentWork />} />
-                <Route path="/skills" element={<SkillsAndResume />} />
-              </Routes>
-            </AnimatePresence>
-          </Box>
-        </Box>
+        <AppRoutes />
       </Router>
     </ThemeProvider>
   );

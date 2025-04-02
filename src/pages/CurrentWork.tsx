@@ -2,9 +2,6 @@ import { Box, Container, Typography, Paper, useTheme, Button } from '@mui/materi
 import { motion } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CodeIcon from '@mui/icons-material/Code';
-import BuildIcon from '@mui/icons-material/Build';
-import LightbulbIcon from '@mui/icons-material/Lightbulb';
-import PsychologyIcon from '@mui/icons-material/Psychology';
 import TimelineIcon from '@mui/icons-material/Timeline';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 

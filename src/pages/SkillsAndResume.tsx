@@ -160,7 +160,7 @@ const SkillsAndResume = () => {
                   {selectedSkill} Experience
                 </Typography>
                 <Typography variant="body1" color="text.secondary">
-                  {skills[selectedSkill].description}
+                  {skills[selectedSkill as keyof typeof skills].description}
                 </Typography>
                 {/* Add more detailed experience information here */}
               </Paper>
